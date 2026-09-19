@@ -1,11 +1,11 @@
 {
   "id": 1,
   "title": "Quiz engine and UI with seed question bank",
-  "phase": "dev_agreed_done",
+  "phase": "liveqa_live",
   "qa1_audit_result": "PASS",
   "qa1_audit_file_hash": "94564d1879327c14c8adbf45f282c38b79bded0ef8b19f9275358be89fcbcf30",
   "qa1_audited_tree_hash": "80f9483c062e6c37b5c42b9792c490474198a764f0a9ee168538124cf164f51a",
-  "last_shipped_commit": null,
+  "last_shipped_commit": "be87be84cb569e72fd21592304af80d1fe4db81a",
   "groundtruth_result": null,
   "live_loop_audit_trees": [],
   "audit_rounds": 2,
@@ -36,11 +36,17 @@
       "actor": "dev-team",
       "event": "dev_agreed_done",
       "detail": ""
+    },
+    {
+      "ts": "2026-09-19T19:45:45+00:00",
+      "actor": "pipeman",
+      "event": "shipped",
+      "detail": "commit=be87be8 | ci=undeterminable: could not run gh to query CI runs for be87be84cb569e72fd21592304af80d1fe4db81a ([WinError 2] The system cannot find the file specified) \u2014 gh may not be installed, or the query timed out."
     }
   ],
   "last_claim": {
-    "claude_session_id": "6718cac1-3f1a-57d1-aa6f-4ca1fab6cb1a",
-    "claude_agent": "dev-team-1",
-    "ts": "2026-09-19T19:41:08+00:00"
+    "claude_session_id": "ba96a034-6925-5f61-90e8-958646867ed5",
+    "claude_agent": "pipeman",
+    "ts": "2026-09-19T19:45:45+00:00"
   }
 }
