@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>US Presidents Quiz</title>
+    <meta name="description" content="A 10-question multiple-choice quiz about US presidents, with instant feedback." />
+    <!-- Relative URLs only: this site is served from the /Test/ subpath on GitHub Pages. -->
+    <!-- Inline icon: without one, browsers request /favicon.ico from the domain root, which 404s outside /Test/. -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231d4ed8'/%3E%3Cpath d='M16 6l3 7h7l-5.6 4.4L22.5 25 16 20.6 9.5 25l2.1-7.6L6 13h7z' fill='white'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <main class="app">
+      <section id="screen-start" aria-labelledby="start-title">
+        <h1 id="start-title" tabindex="-1">US Presidents Quiz</h1>
+        <p class="lead">Test what you know about US presidents with 10 multiple-choice questions and instant feedback.</p>
+        <p id="load-error" class="load-error" role="alert" hidden></p>
+        <button id="start-btn" class="btn btn-primary" type="button" disabled>Start quiz</button>
+        <noscript><p class="load-error">This quiz needs JavaScript to run.</p></noscript>
+      </section>
+
+      <section id="screen-question" hidden>
+        <h2 id="question-heading" class="question-heading" tabindex="-1">
+          <span id="progress" class="progress"></span>
+          <span id="question-text" class="question-text"></span>
+        </h2>
+        <div id="choices" class="choices" role="group" aria-labelledby="question-heading"></div>
+        <div id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true" hidden>
+          <span id="feedback-icon" class="feedback-icon" aria-hidden="true"></span>
+          <span id="feedback-text"></span>
+        </div>
+        <button id="next-btn" class="btn btn-primary" type="button" hidden>Next</button>
+      </section>
+
+      <section id="screen-results" aria-labelledby="results-heading" hidden>
+        <h2 id="results-heading" tabindex="-1">Your score</h2>
+        <p id="score" class="score"></p>
+        <button id="again-btn" class="btn btn-primary" type="button">Play again</button>
+      </section>
+    </main>
+  </body>
+</html>

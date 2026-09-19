@@ -1,0 +1,222 @@
+/* Mobile-first. Nothing here has a fixed width, so the layout reflows down to
+   320px without horizontal scrolling. All URLs are relative (none needed yet). */
+
+:root {
+  color-scheme: light;
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --text: #1a1f2b;
+  --muted: #4a5366;
+  --border: #8a93a6;
+  --accent: #1d4ed8;
+  --accent-text: #ffffff;
+  --correct: #0f6b2f;
+  --correct-bg: #e6f5ea;
+  --wrong: #a3161f;
+  --wrong-bg: #fbe9ea;
+  --tap: 44px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.app {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1rem;
+  overflow-wrap: anywhere;
+}
+
+h1,
+h2 {
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 1rem 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+.lead {
+  color: var(--muted);
+  margin: 0 0 1.5rem;
+}
+
+/* Programmatic focus targets: keep the visible focus ring, drop nothing. */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+[tabindex='-1']:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--tap);
+  min-height: var(--tap);
+  padding: 0.625rem 1.25rem;
+  border: 2px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+  font-weight: 600;
+}
+
+.btn:disabled {
+  cursor: default;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+}
+
+.question-heading {
+  margin: 0.5rem 0 1rem;
+}
+
+.progress {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.question-text {
+  display: block;
+}
+
+.choices {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  text-align: left;
+}
+
+/* Locked choices must stay readable, so undo the browser's greyed-out look. */
+.choice:disabled {
+  color: var(--text);
+  opacity: 1;
+}
+
+.choice-tag {
+  margin-top: 0.125rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Correct vs wrong is carried by the tag text and the border style as well as colour. */
+.choice-correct {
+  border: 3px solid var(--correct);
+  background: var(--correct-bg);
+}
+
+.choice-correct .choice-tag {
+  color: var(--correct);
+}
+
+.choice-wrong {
+  border: 3px dashed var(--wrong);
+  background: var(--wrong-bg);
+}
+
+.choice-wrong .choice-tag {
+  color: var(--wrong);
+}
+
+.feedback {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-left: 6px solid var(--border);
+  border-radius: 0.25rem;
+  background: var(--surface);
+}
+
+.feedback-icon {
+  font-weight: 700;
+}
+
+.feedback-correct {
+  border-left-color: var(--correct);
+}
+
+.feedback-correct .feedback-icon {
+  color: var(--correct);
+}
+
+.feedback-wrong {
+  border-left-color: var(--wrong);
+}
+
+.feedback-wrong .feedback-icon {
+  color: var(--wrong);
+}
+
+.score {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.load-error {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border-left: 6px solid var(--wrong);
+  background: var(--wrong-bg);
+  color: var(--wrong);
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn {
+    transition: background-color 0.1s ease;
+  }
+}

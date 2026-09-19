@@ -1,0 +1,110 @@
+[
+  {
+    "id": "order-001",
+    "category": "order-terms",
+    "question": "Who was the 7th president of the United States?",
+    "correctAnswer": "Andrew Jackson",
+    "distractors": ["John Quincy Adams", "John Tyler", "James K. Polk"],
+    "fact": "Andrew Jackson served two terms, from 1829 to 1837.",
+    "source": "Miller Center, University of Virginia: presidential profile, Andrew Jackson (millercenter.org/president/jackson)"
+  },
+  {
+    "id": "order-002",
+    "category": "order-terms",
+    "question": "Who became president after Abraham Lincoln was assassinated?",
+    "correctAnswer": "Andrew Johnson",
+    "distractors": ["Ulysses S. Grant", "Rutherford B. Hayes", "Millard Fillmore"],
+    "fact": "Vice President Andrew Johnson took over on April 15, 1865, the day Lincoln died.",
+    "source": "Miller Center, University of Virginia: presidential profile, Andrew Johnson (millercenter.org/president/johnson)"
+  },
+  {
+    "id": "order-003",
+    "category": "order-terms",
+    "question": "Grover Cleveland served two non-consecutive terms. Which two numbers does he hold in the count of presidents?",
+    "correctAnswer": "22nd and 24th",
+    "distractors": ["22nd and 23rd", "23rd and 25th", "21st and 24th"],
+    "fact": "Benjamin Harrison, the 23rd president, served between Cleveland's two terms.",
+    "source": "White House Historical Association: Grover Cleveland (whitehouse.gov/about-the-white-house/presidents/grover-cleveland)"
+  },
+  {
+    "id": "events-001",
+    "category": "events-policies",
+    "question": "Which president issued the Emancipation Proclamation?",
+    "correctAnswer": "Abraham Lincoln",
+    "distractors": ["Andrew Johnson", "Ulysses S. Grant", "James Buchanan"],
+    "fact": "The proclamation, effective January 1, 1863, declared enslaved people in Confederate-held territory to be free.",
+    "source": "National Archives: Emancipation Proclamation (archives.gov/exhibits/featured-documents/emancipation-proclamation)"
+  },
+  {
+    "id": "events-002",
+    "category": "events-policies",
+    "question": "Which president completed the Louisiana Purchase in 1803?",
+    "correctAnswer": "Thomas Jefferson",
+    "distractors": ["James Madison", "John Adams", "James Monroe"],
+    "fact": "The purchase from France roughly doubled the size of the United States.",
+    "source": "National Archives: Louisiana Purchase Treaty (archives.gov/milestone-documents/louisiana-purchase)"
+  },
+  {
+    "id": "events-003",
+    "category": "events-policies",
+    "question": "Which president launched the New Deal in response to the Great Depression?",
+    "correctAnswer": "Franklin D. Roosevelt",
+    "distractors": ["Herbert Hoover", "Theodore Roosevelt", "Harry S. Truman"],
+    "fact": "The New Deal programs began in 1933, early in Franklin D. Roosevelt's first term.",
+    "source": "Miller Center, University of Virginia: presidential profile, Franklin D. Roosevelt (millercenter.org/president/fdroosevelt)"
+  },
+  {
+    "id": "party-001",
+    "category": "party-vp-bio",
+    "question": "Which vice president became president when William McKinley died in 1901?",
+    "correctAnswer": "Theodore Roosevelt",
+    "distractors": ["Chester A. Arthur", "Calvin Coolidge", "Millard Fillmore"],
+    "fact": "McKinley died on September 14, 1901, eight days after being shot, and Roosevelt was sworn in as president.",
+    "source": "Miller Center, University of Virginia: presidential profile, Theodore Roosevelt (millercenter.org/president/roosevelt)"
+  },
+  {
+    "id": "party-002",
+    "category": "party-vp-bio",
+    "question": "Which president later served as Chief Justice of the United States?",
+    "correctAnswer": "William Howard Taft",
+    "distractors": ["Woodrow Wilson", "Calvin Coolidge", "Herbert Hoover"],
+    "fact": "William Howard Taft was president from 1909 to 1913 and Chief Justice from 1921 to 1930.",
+    "source": "Supreme Court of the United States: Chief Justices, William Howard Taft (supremecourt.gov)"
+  },
+  {
+    "id": "party-003",
+    "category": "party-vp-bio",
+    "question": "In which state was Ronald Reagan born?",
+    "correctAnswer": "Illinois",
+    "distractors": ["California", "Ohio", "Nebraska"],
+    "fact": "Reagan was born in Tampico, Illinois, in 1911, and later served as governor of California.",
+    "source": "Ronald Reagan Presidential Library and Museum: biography (reaganlibrary.gov)"
+  },
+  {
+    "id": "quotes-001",
+    "category": "quotes-trivia",
+    "question": "Which president said in his 1961 inaugural address, \"Ask not what your country can do for you — ask what you can do for your country\"?",
+    "correctAnswer": "John F. Kennedy",
+    "distractors": ["Lyndon B. Johnson", "Richard Nixon", "Dwight D. Eisenhower"],
+    "fact": "Kennedy delivered the line at his inauguration on January 20, 1961.",
+    "source": "John F. Kennedy Presidential Library and Museum: Inaugural Address, January 20, 1961 (jfklibrary.org)"
+  },
+  {
+    "id": "quotes-002",
+    "category": "quotes-trivia",
+    "question": "Who was the first president to live in the White House?",
+    "correctAnswer": "John Adams",
+    "distractors": ["George Washington", "Thomas Jefferson", "James Madison"],
+    "fact": "John Adams moved in in November 1800, while the building was still unfinished.",
+    "source": "White House Historical Association: John Adams and the White House (whitehousehistory.org)"
+  },
+  {
+    "id": "quotes-003",
+    "category": "quotes-trivia",
+    "question": "Who was the first president born after the Declaration of Independence?",
+    "correctAnswer": "Martin Van Buren",
+    "distractors": ["Andrew Jackson", "William Henry Harrison", "John Quincy Adams"],
+    "fact": "Martin Van Buren, the 8th president, was born in Kinderhook, New York, in 1782.",
+    "source": "Miller Center, University of Virginia: presidential profile, Martin Van Buren (millercenter.org/president/vanburen)"
+  }
+]
