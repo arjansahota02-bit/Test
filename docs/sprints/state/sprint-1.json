@@ -1,7 +1,7 @@
 {
   "id": 1,
   "title": "Quiz engine and UI with seed question bank",
-  "phase": "qa1_audit",
+  "phase": "dev_agreed_done",
   "qa1_audit_result": "PASS",
   "qa1_audit_file_hash": "94564d1879327c14c8adbf45f282c38b79bded0ef8b19f9275358be89fcbcf30",
   "qa1_audited_tree_hash": "80f9483c062e6c37b5c42b9792c490474198a764f0a9ee168538124cf164f51a",
@@ -30,11 +30,17 @@
       "actor": "qa1",
       "event": "audit",
       "detail": "PASS: QA1 gate-1 audit, round 2, sprint 1. Audited commit be87be8. The working tree was clean.\n\nVERDICT: PASS.\n\nSPRINT FILE: re-checked. git diff a03a9c5 be87be8 on the sprint file is empty, so the requirements are unchanged since round 1's fresh read.\n\nROUND-1 FIX (R3/AC3): FIXED. site/js/validate.js now keys the duplicate-id map on normalize(id), the same rule the other two R3 comparisons use, and the message still names the offending id. QA1 re-ran the round-1 repro against validateQuestions:\n  [\"order-001\",\"ORDER-001\"]   -> 1 problem (duplicate id), names \"ORDER-001\"\n  [\"order-001\",\" order-001 \"] -> 1 problem (duplicate id), names \" order-001 \"\n  [\"order-001\",\"order-001\"]   -> 1 problem\n  [\"order-001\",\"order-002\"]   -> 0 problems (no over-matching)\nFour new tests cover the case variant, the whitespace variant, distinct ids, and the CLI's stderr and exit code for a case variant. The README now states R3's rule as written.\n\nAC12: QA1 ran npm test: 58/58 pass. npm run validate: OK on 12 questions.\n\nAC14: still met. git diff fe1aca0 be87be8 on site/data/questions.json is empty, so the product-owner approval recorded at fe1aca0 covers the data under audit.\n\nAll other criteria (AC1, AC2, AC4-AC11, AC13) were met in round 1, and the round-2 diff (README.md, site/js/validate.js, tests/validate.test.mjs) touches none of them.\n\nADVISORY items a and b from round 1 (live-region timing, and an uncaught error if the bank covers too few categories) remain open and non-blocking. Recommend LiveQA or sprint 3 check (a) with a real screen reader."
+    },
+    {
+      "ts": "2026-09-19T19:41:08+00:00",
+      "actor": "dev-team",
+      "event": "dev_agreed_done",
+      "detail": ""
     }
   ],
   "last_claim": {
-    "claude_session_id": "807bbff7-ae8f-5e50-82b5-1e0266047374",
-    "claude_agent": "qa1",
-    "ts": "2026-09-19T19:40:23+00:00"
+    "claude_session_id": "6718cac1-3f1a-57d1-aa6f-4ca1fab6cb1a",
+    "claude_agent": "dev-team-1",
+    "ts": "2026-09-19T19:41:08+00:00"
   }
 }
