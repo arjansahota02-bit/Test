@@ -2,7 +2,7 @@
 id: 1
 title: "Quiz engine and UI with seed question bank"
 epic: "US Presidents Quiz v1"
-status: in_progress
+status: done
 created: 2026-09-19T19:01:31+00:00
 ---
 
