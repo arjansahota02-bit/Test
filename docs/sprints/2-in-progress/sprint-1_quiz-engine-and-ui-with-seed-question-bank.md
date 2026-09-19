@@ -91,4 +91,4 @@ Run against the deployed `https://arjansahota02-bit.github.io/Test/`, not a loca
 
 ## Product owner approvals
 *(Filled in by Master Controller only, per R14. Empty until the product owner has reviewed the seed bank.)*
-- Seed bank: _pending_
+- **Seed bank: APPROVED.** 2026-09-19. Reviewed file: `site/data/questions.json` at commit `fe1aca01952ed052a9d0446db297e5307e1d49fe` (12 questions, ids `order-001`–`003`, `events-001`–`003`, `party-001`–`003`, `quotes-001`–`003`). All 12 questions were shown to the product owner in full: question, correct answer, distractors and fact line. Master Controller also flagged two issues with citations (`source` values, never shown to students): `order-003`'s source is labelled "White House Historical Association" but links to whitehouse.gov, and `party-002`'s source is a bare domain (`supremecourt.gov`). The product owner was offered the choice of fixing these first and approved as-is. The product owner's words, verbatim: "Approved". **Any change to this file after `fe1aca0` voids this approval and requires re-review (R14).** The two citation issues are carried forward to sprint 2's source review, not fixed here.
