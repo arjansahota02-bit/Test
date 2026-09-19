@@ -51,10 +51,14 @@ export function validateQuestions(data) {
     }
 
     if (hasId) {
-      if (firstIndexOfId.has(entry.id)) {
-        report(`duplicate id (already used by entry #${firstIndexOfId.get(entry.id) + 1}).`);
+      // Same comparison rule as every other R3 check: case and edge whitespace ignored.
+      const key = normalize(entry.id);
+      if (firstIndexOfId.has(key)) {
+        report(
+          `duplicate id (same as entry #${firstIndexOfId.get(key) + 1}, ignoring case and surrounding whitespace).`,
+        );
       } else {
-        firstIndexOfId.set(entry.id, index);
+        firstIndexOfId.set(key, index);
       }
     }
 

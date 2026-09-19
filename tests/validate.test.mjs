@@ -75,6 +75,34 @@ test('flags a duplicate id, naming it', () => {
   assert.match(problems[0].message, /duplicate id/);
 });
 
+test('flags a duplicate id that differs only by case, naming it', () => {
+  const problems = validateQuestions([makeQuestion({ id: 'order-001' }), makeQuestion({ id: 'ORDER-001' })]);
+  assert.equal(problems.length, 1);
+  assertNamesId(problems, 'ORDER-001');
+  assert.match(problems[0].message, /duplicate id/);
+});
+
+test('flags a duplicate id that differs only by surrounding whitespace, naming it', () => {
+  const problems = validateQuestions([makeQuestion({ id: 'order-001' }), makeQuestion({ id: ' order-001 ' })]);
+  assert.equal(problems.length, 1);
+  assertNamesId(problems, ' order-001 ');
+  assert.match(problems[0].message, /duplicate id/);
+});
+
+test('ids that are genuinely different are not flagged as duplicates', () => {
+  assert.deepEqual(
+    validateQuestions([makeQuestion({ id: 'order-001' }), makeQuestion({ id: 'order-002' })]),
+    [],
+  );
+});
+
+test('CLI: reports a case-variant duplicate id in its output and exits non-zero', () => {
+  const result = runCli([makeQuestion({ id: 'order-001' }), makeQuestion({ id: 'ORDER-001' })]);
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /"ORDER-001"/);
+  assert.match(result.stderr, /duplicate id/);
+});
+
 test('only the offending entry is blamed', () => {
   const problems = validateQuestions([
     makeQuestion({ id: 'fine' }),

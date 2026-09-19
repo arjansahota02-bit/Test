@@ -55,7 +55,7 @@ npx serve site        # or: python -m http.server --directory site
 
 | Field | Type | Notes |
 |---|---|---|
-| `id` | string | Unique. |
+| `id` | string | Unique (ignoring case and surrounding whitespace, so `order-001` and `ORDER-001` collide). |
 | `category` | string | Exactly one of `order-terms`, `events-policies`, `party-vp-bio`, `quotes-trivia`. |
 | `question` | string | |
 | `correctAnswer` | string | |
@@ -63,7 +63,9 @@ npx serve site        # or: python -m http.server --directory site
 | `fact` | string | One line, shown as feedback after every answer. |
 | `source` | string | A citation or URL, kept for review; not shown to students. |
 
-Comparisons for "same answer" ignore case and leading/trailing whitespace.
+Every comparison the validator makes ignores case and leading/trailing
+whitespace: duplicate `id`s, a distractor equal to `correctAnswer`, and
+duplicate choices among the four options.
 This format is fixed by sprint 1; changing it needs its own sprint.
 
 ## Deployment (GitHub Pages)
