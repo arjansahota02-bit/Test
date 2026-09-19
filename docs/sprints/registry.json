@@ -4,8 +4,8 @@
     "1": {
       "title": "Quiz engine and UI with seed question bank",
       "epic": "US Presidents Quiz v1",
-      "status": "todo",
-      "file": "docs\\sprints\\1-todo\\sprint-1_quiz-engine-and-ui-with-seed-question-bank.md"
+      "status": "in_progress",
+      "file": "docs\\sprints\\2-in-progress\\sprint-1_quiz-engine-and-ui-with-seed-question-bank.md"
     }
   }
 }
